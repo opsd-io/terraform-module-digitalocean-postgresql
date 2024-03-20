@@ -47,7 +47,7 @@ output "postgresql_main_default_user_password" {
 }
 
 output "database_firewall_id" {
-  value       = [for id in var.firewall_rules : digitalocean_database_firewall.firewall[id].id]
+  value       = digitalocean_database_firewall.firewall.id
   description = "A unique identifier for the firewall"
 }
 
