@@ -24,7 +24,7 @@ variable "postgresql_main_size" {
 variable "version_of_engine" {
   description = "Engine version used by the cluster."
   type        = number
-  default     = 8
+  default     = 11
 }
 
 variable "region" {

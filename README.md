@@ -71,7 +71,7 @@ No modules.
 | <a name="input_postgresql_main_node_count"></a> [postgresql\_main\_node\_count](#input\_postgresql\_main\_node\_count) | Number of mysql nodes that will be created. | `number` | `1` | no |
 | <a name="input_postgresql_main_size"></a> [postgresql\_main\_size](#input\_postgresql\_main\_size) | The mysql node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_region"></a> [region](#input\_region) | DigitalOcean region where the cluster will reside. | `string` | n/a | yes |
-| <a name="input_version_of_engine"></a> [version\_of\_engine](#input\_version\_of\_engine) | Engine version used by the cluster. | `number` | `8` | no |
+| <a name="input_version_of_engine"></a> [version\_of\_engine](#input\_version\_of\_engine) | Engine version used by the cluster. | `number` | `11` | no |
 
 ## Outputs
 
