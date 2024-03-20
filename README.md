@@ -57,7 +57,7 @@ No modules.
 |------|------|
 | [digitalocean_database_cluster.postgresql_main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_cluster) | resource |
 | [digitalocean_database_firewall.firewall](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_firewall) | resource |
-| [digitalocean_database_user.user](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_user) | resource |
+| [digitalocean_database_user.user_creation](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_user) | resource |
 
 ## Inputs
 

@@ -53,6 +53,6 @@ output "database_firewall_id" {
 
 output "database_users_id" {
   description = "A unique identifier for database users"
-  value       = [for id in var.database_users : digitalocean_database_user.user[id].id]
+  value       = [for id in var.database_users : digitalocean_database_user.user_creation[id].id]
 
 }
