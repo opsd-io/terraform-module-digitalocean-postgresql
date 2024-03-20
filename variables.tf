@@ -12,7 +12,7 @@ variable "postgresql_main_node_count" {
 variable "engine" {
   description = "Database engine used by the cluster."
   type        = string
-  default     = "mysql"
+  default     = "pg"
 }
 
 variable "postgresql_main_size" {

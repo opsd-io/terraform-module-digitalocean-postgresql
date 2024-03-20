@@ -66,7 +66,7 @@ No modules.
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster | `set(string)` | n/a | yes |
 | <a name="input_database_users"></a> [database\_users](#input\_database\_users) | List of users | `set(string)` | `[]` | no |
 | <a name="input_databasename"></a> [databasename](#input\_databasename) | The name of the database cluster. | `string` | n/a | yes |
-| <a name="input_engine"></a> [engine](#input\_engine) | Database engine used by the cluster. | `string` | `"mysql"` | no |
+| <a name="input_engine"></a> [engine](#input\_engine) | Database engine used by the cluster. | `string` | `"pg"` | no |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster | `set(string)` | `[]` | no |
 | <a name="input_postgresql_main_node_count"></a> [postgresql\_main\_node\_count](#input\_postgresql\_main\_node\_count) | Number of mysql nodes that will be created. | `number` | `1` | no |
 | <a name="input_postgresql_main_size"></a> [postgresql\_main\_size](#input\_postgresql\_main\_size) | The mysql node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
