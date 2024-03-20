@@ -19,14 +19,6 @@ resource "digitalocean_database_user" "user_creation" {
   for_each   = var.database_users
   cluster_id = digitalocean_database_cluster.postgresql_main.id
   name       = each.key
-
-  # dynamic "user" {
-  #   for_each = var.database_users
-  #   content {
-  #     name = user.value
-  #   }
-  # }
-
 }
 #---------------------------------------------#
 #Description : creating main database.
