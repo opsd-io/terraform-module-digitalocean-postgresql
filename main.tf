@@ -1,9 +1,3 @@
-resource "digitalocean_database_postgresql_config" "postgresql_main" {
-  cluster_id        = digitalocean_database_cluster.postgresql_main.id
-  connect_timeout   = 10
-  default_time_zone = "UTC"
-}
-
 #---------------------------------------------#
 #Description : adding database firewall rules.
 #---------------------------------------------#
