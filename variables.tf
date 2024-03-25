@@ -1,27 +1,20 @@
-variable "databasename" {
+variable "cluster_name" {
   description = "The name of the database cluster."
   type        = string
   nullable    = false
 }
-variable "postgresql_main_node_count" {
+variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
   default     = 1
 }
-
-variable "engine" {
-  description = "Database engine used by the cluster."
-  type        = string
-  default     = "pg"
-}
-
-variable "postgresql_main_size" {
+variable "node_size" {
   description = "The mysql node instance size."
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
 
-variable "version_of_engine" {
+variable "postgresql_version" {
   description = "Engine version used by the cluster."
   type        = number
   default     = 16
@@ -39,13 +32,13 @@ variable "common_tags" {
 }
 
 variable "firewall_rules" {
+  description = "List of trusted sources associated with the cluster"
   type        = set(string)
   default     = []
-  description = "List of trusted sources associated with the cluster"
 }
 
 variable "database_users" {
+  description = "List of users"
   type        = set(string)
   default     = []
-  description = "List of users"
 }
