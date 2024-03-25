@@ -32,17 +32,17 @@ output "main_private_uri" {
 
 output "main_default_database" {
   description = "Name of the cluster's default database."
-  value       = digitalocean_database_cluster.postgresql_main.database
+  value       = digitalocean_database_cluster.main.database
 }
 
 output "main_default_user" {
   description = "Username for the cluster's default user."
-  value       = digitalocean_database_cluster.postgresql_main.user
+  value       = digitalocean_database_cluster.main.user
 }
 
 output "main_default_user_password" {
   description = "Password for the cluster's default user."
-  value       = digitalocean_database_cluster.postgresql_main.password
+  value       = digitalocean_database_cluster.main.password
   sensitive   = true
 }
 
