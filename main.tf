@@ -20,6 +20,7 @@ resource "digitalocean_database_firewall" "replica_fw" {
       value = rule.value
     }
   }
+  depends_on = [digitalocean_database_replica.replica_main]
 }
 resource "digitalocean_database_user" "main" {
   for_each   = var.database_users
