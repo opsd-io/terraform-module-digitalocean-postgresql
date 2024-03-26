@@ -11,6 +11,7 @@ resource "digitalocean_database_firewall" "main" {
 }
 
 resource "digitalocean_database_firewall" "replica_fw" {
+  count      = var.replica_enable ? 1 : 0
   cluster_id = digitalocean_database_replica.replica_main[*].uuid
 
   dynamic "rule" {
