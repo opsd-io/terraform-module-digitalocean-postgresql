@@ -12,7 +12,7 @@ resource "digitalocean_database_firewall" "main" {
 
 resource "digitalocean_database_firewall" "replica_fw" {
   # cluster_id = digitalocean_database_replica.replica_main[*].id
-  cluster_id = join("", digitalocean_database_replica.replica_main[*].id)
+  cluster_id = join("", digitalocean_database_replica.replica_main[*].uuid)
   dynamic "rule" {
     for_each = var.firewall_rules_replica
     content {
