@@ -10,17 +10,17 @@ resource "digitalocean_database_firewall" "main" {
   }
 }
 
-# resource "digitalocean_database_firewall" "replica-fw" {
-#   cluster_id = digitalocean_database_cluster.replica_main.uuid
+resource "digitalocean_database_firewall" "replica_fw" {
+  cluster_id = digitalocean_database_replica.replica_main[*].uuid
 
-#   dynamic "rule" {
-#     for_each = var.firewall_rules_replica
-#     content {
-#       type  = "ip_addr"
-#       value = rule.value
-#     }
-#   }
-# }
+  dynamic "rule" {
+    for_each = var.firewall_rules_replica
+    content {
+      type  = "ip_addr"
+      value = rule.value
+    }
+  }
+}
 resource "digitalocean_database_user" "main" {
   for_each   = var.database_users
   cluster_id = digitalocean_database_cluster.main.id

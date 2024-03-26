@@ -57,6 +57,7 @@ No modules.
 |------|------|
 | [digitalocean_database_cluster.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_cluster) | resource |
 | [digitalocean_database_firewall.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_firewall) | resource |
+| [digitalocean_database_firewall.replica_fw](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_firewall) | resource |
 | [digitalocean_database_replica.replica_main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_replica) | resource |
 | [digitalocean_database_user.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_user) | resource |
 
@@ -68,6 +69,7 @@ No modules.
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster | `set(string)` | n/a | yes |
 | <a name="input_database_users"></a> [database\_users](#input\_database\_users) | List of users | `set(string)` | `[]` | no |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster | `set(string)` | `[]` | no |
+| <a name="input_firewall_rules_replica"></a> [firewall\_rules\_replica](#input\_firewall\_rules\_replica) | List of trusted sources associated with the replica cluster | `set(string)` | `[]` | no |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Number of mysql nodes that will be created. | `number` | `1` | no |
 | <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The mysql node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_postgresql_version"></a> [postgresql\_version](#input\_postgresql\_version) | Engine version used by the cluster. | `number` | `16` | no |
