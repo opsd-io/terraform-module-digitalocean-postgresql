@@ -17,11 +17,6 @@ What does the module provide?
 ```hcl
 module "terraform-module-digitalocean-postgresql" {
 
-
-
-=======
-
-
   cluster_name          = "example-postgresql-cluster"
   engine                = "pg"
   postgresql_version    = "11"
@@ -31,13 +26,12 @@ module "terraform-module-digitalocean-postgresql" {
   common_tags           = ["production"]
   database_users        = ["Admin", "Mark", "Robert"]
   firewall_rules        = ["192.168.0.1", "192.168.0.2", "192.168.0.8"]
-
   replica_enable         = true
   replica_node_size      = "db-s-1vcpu-1gb"
   replica_cluster_name   = "example-postgresql-replica-cluster"
   replica_region         = "nyc1"
   firewall_rules_replica = ["172.168.0.1", "172.168.0.2", "172.168.0.8"]
-=======
+
 
 }
 ```
@@ -90,12 +84,10 @@ No modules.
 | <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The redis replica node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_replica_region"></a> [replica\_region](#input\_replica\_region) | DigitalOcean replica region where the cluster will reside. | `string` | n/a | yes |
 
-
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-
 | <a name="output_firewall_id"></a> [firewall\_id](#output\_firewall\_id) | A unique identifier for the firewall. |
 | <a name="output_main_default_database"></a> [main\_default\_database](#output\_main\_default\_database) | Name of the cluster's default database. |
 | <a name="output_main_default_user"></a> [main\_default\_user](#output\_main\_default\_user) | Username for the cluster's default user. |
@@ -109,7 +101,6 @@ No modules.
 | <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica ID. |
 | <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
 | <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users. |
-
 <!-- END_TF_DOCS -->
 
 ## Examples of usage

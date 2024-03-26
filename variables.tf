@@ -10,7 +10,6 @@ variable "replica_cluster_name" {
   nullable    = false
 }
 
-
 variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
@@ -28,7 +27,6 @@ variable "replica_node_size" {
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
-
 
 variable "postgresql_version" {
   description = "Engine version used by the cluster."

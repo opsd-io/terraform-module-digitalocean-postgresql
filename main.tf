@@ -10,7 +10,6 @@ resource "digitalocean_database_firewall" "main" {
   }
 }
 
-
 resource "digitalocean_database_firewall" "replica_fw" {
   count      = var.replica_enable ? 1 : 0
   cluster_id = join("", digitalocean_database_replica.main[*].uuid)
@@ -23,7 +22,6 @@ resource "digitalocean_database_firewall" "replica_fw" {
   }
   depends_on = [digitalocean_database_replica.main]
 }
-
 
 resource "digitalocean_database_user" "main" {
   for_each   = var.database_users
@@ -47,4 +45,3 @@ resource "digitalocean_database_replica" "main" {
   size       = var.replica_node_size
   region     = var.replica_region
 }
-
