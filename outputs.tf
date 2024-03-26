@@ -54,5 +54,9 @@ output "firewall_id" {
 output "user_ids" {
   description = "A unique identifier for database users"
   value       = [for id in var.database_users : digitalocean_database_user.main[id].id]
+}
 
+output "replica_uuid" {
+  description = "Replica UUID."
+  value       = digitalocean_database_replica.main_replica[*].uuid
 }

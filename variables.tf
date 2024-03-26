@@ -3,13 +3,27 @@ variable "cluster_name" {
   type        = string
   nullable    = false
 }
+
+variable "replica_cluster_name" {
+  description = "The name of the replica database cluster."
+  type        = string
+  nullable    = false
+}
+
 variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
   default     = 1
 }
+
 variable "node_size" {
   description = "The mysql node instance size."
+  type        = string
+  default     = "db-s-1vcpu-1gb"
+}
+
+variable "replica_node_size" {
+  description = "The redis replica node instance size."
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
@@ -22,6 +36,12 @@ variable "postgresql_version" {
 
 variable "region" {
   description = "DigitalOcean region where the cluster will reside."
+  type        = string
+  nullable    = false
+}
+
+variable "replica_region" {
+  description = "DigitalOcean replica region where the cluster will reside."
   type        = string
   nullable    = false
 }
@@ -41,4 +61,9 @@ variable "database_users" {
   description = "List of users"
   type        = set(string)
   default     = []
+}
+variable "replica_enable" {
+  description = "Flag to control the replica creation."
+  type        = bool
+  default     = false
 }
