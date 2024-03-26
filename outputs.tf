@@ -58,10 +58,10 @@ output "user_ids" {
 
 output "replica_uuid" {
   description = "Replica UUID."
-  value       = digitalocean_database_replica.replica_main[*].uuid
+  value       = digitalocean_database_replica.main[*].uuid
 }
 
 output "replica_id" {
   description = "Replica ID."
-  value       = digitalocean_database_replica.replica_main[*].id
+  value       = digitalocean_database_replica.main[*].id
 }
