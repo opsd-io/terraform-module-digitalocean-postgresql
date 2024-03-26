@@ -10,6 +10,7 @@ variable "replica_cluster_name" {
   nullable    = false
 }
 
+
 variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
@@ -27,6 +28,7 @@ variable "replica_node_size" {
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
+
 
 variable "postgresql_version" {
   description = "Engine version used by the cluster."
@@ -56,16 +58,19 @@ variable "firewall_rules" {
   type        = set(string)
   default     = []
 }
+
 variable "replica_firewall_rules" {
   description = "List of trusted sources associated with the replica cluster"
   type        = set(string)
   default     = []
 }
+
 variable "database_users" {
   description = "List of users"
   type        = set(string)
   default     = []
 }
+
 variable "replica_enable" {
   description = "Flag to control the replica creation."
   type        = bool

@@ -1,5 +1,6 @@
 module "Digitalocean_postgresql_example" {
-  source                 = "github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=1-add-spare-node-for-postgresql"
+
+  source             = "github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=2-create-postgresql-terraform-module"
   cluster_name           = "example-postgresql-cluster"
   postgresql_version     = "16"
   node_size              = "db-s-1vcpu-1gb"
