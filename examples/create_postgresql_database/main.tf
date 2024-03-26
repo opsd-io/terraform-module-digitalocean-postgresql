@@ -10,6 +10,6 @@ module "Digitalocean_postgresql_example" {
   firewall_rules       = ["192.168.0.1", "192.168.0.2", "192.168.0.8"]
   replica_enable       = true
   replica_node_size    = "db-s-1vcpu-1gb"
-  replica_cluster_name = "example-postgresql--eplica-cluster"
+  replica_cluster_name = "example-postgresql-replica-cluster"
   replica_region       = "nyc1"
 }
