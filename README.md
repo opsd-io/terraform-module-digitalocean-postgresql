@@ -93,6 +93,7 @@ No modules.
 | <a name="output_main_private_host"></a> [main\_private\_host](#output\_main\_private\_host) | Same as host, but only accessible from resources within the account and in the same region. |
 | <a name="output_main_private_uri"></a> [main\_private\_uri](#output\_main\_private\_uri) | Same as uri, but only accessible from resources within the account and in the same region. |
 | <a name="output_main_uri"></a> [main\_uri](#output\_main\_uri) | The full URI for connecting to the database cluster. |
+| <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica UUID. |
 | <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
 | <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users |
 <!-- END_TF_DOCS -->

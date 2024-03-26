@@ -60,3 +60,8 @@ output "replica_uuid" {
   description = "Replica UUID."
   value       = digitalocean_database_replica.replica_main[*].uuid
 }
+
+output "replica_id" {
+  description = "Replica UUID."
+  value       = digitalocean_database_replica.replica_main[*].id
+}
