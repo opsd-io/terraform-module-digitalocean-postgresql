@@ -83,7 +83,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_firewall_id"></a> [firewall\_id](#output\_firewall\_id) | A unique identifier for the firewall |
+| <a name="output_firewall_id"></a> [firewall\_id](#output\_firewall\_id) | A unique identifier for the firewall. |
 | <a name="output_main_default_database"></a> [main\_default\_database](#output\_main\_default\_database) | Name of the cluster's default database. |
 | <a name="output_main_default_user"></a> [main\_default\_user](#output\_main\_default\_user) | Username for the cluster's default user. |
 | <a name="output_main_default_user_password"></a> [main\_default\_user\_password](#output\_main\_default\_user\_password) | Password for the cluster's default user. |
@@ -93,9 +93,9 @@ No modules.
 | <a name="output_main_private_host"></a> [main\_private\_host](#output\_main\_private\_host) | Same as host, but only accessible from resources within the account and in the same region. |
 | <a name="output_main_private_uri"></a> [main\_private\_uri](#output\_main\_private\_uri) | Same as uri, but only accessible from resources within the account and in the same region. |
 | <a name="output_main_uri"></a> [main\_uri](#output\_main\_uri) | The full URI for connecting to the database cluster. |
-| <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica UUID. |
+| <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica ID. |
 | <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
-| <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users |
+| <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage

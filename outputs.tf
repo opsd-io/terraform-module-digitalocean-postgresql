@@ -48,11 +48,11 @@ output "main_default_user_password" {
 
 output "firewall_id" {
   value       = digitalocean_database_firewall.main.id
-  description = "A unique identifier for the firewall"
+  description = "A unique identifier for the firewall."
 }
 
 output "user_ids" {
-  description = "A unique identifier for database users"
+  description = "A unique identifier for database users."
   value       = [for id in var.database_users : digitalocean_database_user.main[id].id]
 }
 
@@ -62,6 +62,6 @@ output "replica_uuid" {
 }
 
 output "replica_id" {
-  description = "Replica UUID."
+  description = "Replica ID."
   value       = digitalocean_database_replica.replica_main[*].id
 }
