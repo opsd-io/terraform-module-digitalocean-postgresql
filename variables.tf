@@ -56,6 +56,11 @@ variable "firewall_rules" {
   type        = set(string)
   default     = []
 }
+# variable "firewall_rules_replica" {
+#   description = "List of trusted sources associated with the replica cluster"
+#   type        = set(string)
+#   default     = []
+# }
 
 variable "database_users" {
   description = "List of users"

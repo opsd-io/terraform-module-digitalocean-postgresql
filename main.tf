@@ -9,6 +9,18 @@ resource "digitalocean_database_firewall" "main" {
     }
   }
 }
+
+# resource "digitalocean_database_firewall" "replica-fw" {
+#   cluster_id = digitalocean_database_cluster.replica_main.uuid
+
+#   dynamic "rule" {
+#     for_each = var.firewall_rules_replica
+#     content {
+#       type  = "ip_addr"
+#       value = rule.value
+#     }
+#   }
+# }
 resource "digitalocean_database_user" "main" {
   for_each   = var.database_users
   cluster_id = digitalocean_database_cluster.main.id
@@ -23,7 +35,7 @@ resource "digitalocean_database_cluster" "main" {
   node_count = var.node_count
   tags       = var.common_tags
 }
-resource "digitalocean_database_replica" "main_replica" {
+resource "digitalocean_database_replica" "replica_main" {
   count      = var.replica_enable ? 1 : 0
   cluster_id = digitalocean_database_cluster.main.id
   name       = var.replica_cluster_name
