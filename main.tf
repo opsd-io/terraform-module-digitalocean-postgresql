@@ -28,6 +28,7 @@ resource "digitalocean_database_user" "main" {
   cluster_id = digitalocean_database_cluster.main.id
   name       = each.key
 }
+
 resource "digitalocean_database_cluster" "main" {
   name       = var.cluster_name
   engine     = "pg"

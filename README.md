@@ -32,7 +32,6 @@ module "terraform-module-digitalocean-postgresql" {
   replica_region          = "nyc1"
   firewall_rules_replica  = ["172.168.0.1", "172.168.0.2", "172.168.0.8"]
 
-
 }
 ```
 
