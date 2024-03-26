@@ -14,7 +14,7 @@ resource "digitalocean_database_firewall" "replica_fw" {
   count      = var.replica_enable ? 1 : 0
   cluster_id = join("", digitalocean_database_replica.main[*].uuid)
   dynamic "rule" {
-    for_each = var.firewall_rules_replica
+    for_each = var.replica_firewall_rules
     content {
       type  = "ip_addr"
       value = rule.value

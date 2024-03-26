@@ -56,7 +56,7 @@ variable "firewall_rules" {
   type        = set(string)
   default     = []
 }
-variable "firewall_rules_replica" {
+variable "replica_firewall_rules" {
   description = "List of trusted sources associated with the replica cluster"
   type        = set(string)
   default     = []
