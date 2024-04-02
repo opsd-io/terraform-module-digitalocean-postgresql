@@ -3,11 +3,13 @@ variable "cluster_name" {
   type        = string
   nullable    = false
 }
+
 variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
   default     = 1
 }
+
 variable "node_size" {
   description = "The mysql node instance size."
   type        = string
