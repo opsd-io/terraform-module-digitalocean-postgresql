@@ -9,11 +9,14 @@ resource "digitalocean_database_firewall" "main" {
     }
   }
 }
+
 resource "digitalocean_database_user" "main" {
-  for_each   = var.database_users
+  for_each = var.database_users
+
   cluster_id = digitalocean_database_cluster.main.id
   name       = each.key
 }
+
 resource "digitalocean_database_cluster" "main" {
   name       = var.cluster_name
   engine     = "pg"
