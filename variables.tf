@@ -3,11 +3,13 @@ variable "cluster_name" {
   type        = string
   nullable    = false
 }
+
 variable "node_count" {
   description = "Number of mysql nodes that will be created."
   type        = number
   default     = 1
 }
+
 variable "node_size" {
   description = "The mysql node instance size."
   type        = string
@@ -27,18 +29,19 @@ variable "region" {
 }
 
 variable "common_tags" {
-  description = "A list of tag names to be applied to the database cluster"
+  description = "A list of tag names to be applied to the database cluster."
   type        = set(string)
+  default     = []
 }
 
 variable "firewall_rules" {
-  description = "List of trusted sources associated with the cluster"
+  description = "List of trusted sources associated with the cluster."
   type        = set(string)
   default     = []
 }
 
 variable "database_users" {
-  description = "List of users"
+  description = "List of users."
   type        = set(string)
   default     = []
 }
