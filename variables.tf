@@ -47,24 +47,24 @@ variable "replica_region" {
 }
 
 variable "common_tags" {
-  description = "A list of tag names to be applied to the database cluster"
+  description = "A list of tag names to be applied to the database cluster."
   type        = set(string)
 }
 
 variable "firewall_rules" {
-  description = "List of trusted sources associated with the cluster"
+  description = "List of trusted sources associated with the cluster."
   type        = set(string)
   default     = []
 }
 
 variable "replica_firewall_rules" {
-  description = "List of trusted sources associated with the replica cluster"
+  description = "List of trusted sources associated with the replica cluster."
   type        = set(string)
   default     = []
 }
 
 variable "database_users" {
-  description = "List of users"
+  description = "List of users."
   type        = set(string)
   default     = []
 }
