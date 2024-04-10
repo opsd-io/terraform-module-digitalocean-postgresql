@@ -7,6 +7,17 @@ terraform {
     }
   }
 }
+
+resource "digitalocean_database_cluster" "main" {
+  name       = var.cluster_name
+  engine     = "pg"
+  version    = var.postgresql_version
+  size       = var.node_size
+  region     = var.region
+  node_count = var.node_count
+  tags       = var.common_tags
+}
+
 resource "digitalocean_database_firewall" "main" {
   cluster_id = digitalocean_database_cluster.main.id
 
@@ -17,16 +28,6 @@ resource "digitalocean_database_firewall" "main" {
       value = rule.value
     }
   }
-}
-
-resource "digitalocean_database_cluster" "main" {
-  name       = var.cluster_name
-  engine     = "pg"
-  version    = var.postgresql_version
-  size       = var.node_size
-  region     = var.region
-  node_count = var.node_count
-  tags       = var.common_tags
 }
 
 resource "digitalocean_database_firewall" "replica_fw" {

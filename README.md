@@ -70,7 +70,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name of the database cluster. | `string` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | n/a | yes |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | `[]` | no |
 | <a name="input_database_users"></a> [database\_users](#input\_database\_users) | List of users. | `set(string)` | `[]` | no |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster. | `set(string)` | `[]` | no |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Number of mysql nodes that will be created. | `number` | `1` | no |

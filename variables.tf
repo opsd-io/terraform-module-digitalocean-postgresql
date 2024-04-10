@@ -49,6 +49,7 @@ variable "replica_region" {
 variable "common_tags" {
   description = "A list of tag names to be applied to the database cluster."
   type        = set(string)
+  default     = []
 }
 
 variable "firewall_rules" {
