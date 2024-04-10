@@ -14,5 +14,4 @@ module "example" {
   replica_cluster_name   = "example-postgresql-replica-cluster"
   replica_region         = "nyc1"
   replica_firewall_rules = ["172.168.0.1", "172.168.0.2", "172.168.0.8"]
-
-
+}
