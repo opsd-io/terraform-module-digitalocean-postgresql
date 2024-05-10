@@ -7,7 +7,7 @@ variable "cluster_name" {
 variable "replica_cluster_name" {
   description = "The name of the replica database cluster."
   type        = string
-  nullable    = false
+  default     = null
 }
 
 variable "node_count" {
