@@ -37,7 +37,7 @@ variable "postgresql_version" {
 variable "region" {
   description = "DigitalOcean region where the cluster will reside."
   type        = string
-  default     = null
+  nullable    = false
 }
 
 variable "replica_region" {

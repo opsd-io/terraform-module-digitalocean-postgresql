@@ -1,7 +1,7 @@
 module "example" {
-  source = "github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=changing_variables"
+  source = "github.com/opsd-io/terraform-module-digitalocean-postgresql"
 
-  cluster_name       = "example-postgresql-cluster"
+  cluster_name       = "opsd-main-${var.env-name}"
   postgresql_version = "16"
   node_size          = "db-s-1vcpu-1gb"
   region             = "nyc1"
