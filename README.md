@@ -72,6 +72,7 @@ No modules.
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name of the database cluster. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | `[]` | no |
 | <a name="input_database_users"></a> [database\_users](#input\_database\_users) | List of users. | `set(string)` | `[]` | no |
+| <a name="input_env_name"></a> [env\_name](#input\_env\_name) | Name of the environment, where database will be deploy. Env will be added to cluster name. | `string` | n/a | yes |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster. | `set(string)` | `[]` | no |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Number of postgresql nodes that will be created. | `number` | `1` | no |
 | <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The postgresql node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
