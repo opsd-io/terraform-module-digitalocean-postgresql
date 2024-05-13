@@ -7,23 +7,23 @@ variable "cluster_name" {
 variable "replica_cluster_name" {
   description = "The name of the replica database cluster."
   type        = string
-  nullable    = false
+  default     = null
 }
 
 variable "node_count" {
-  description = "Number of mysql nodes that will be created."
+  description = "Number of postgresql nodes that will be created."
   type        = number
   default     = 1
 }
 
 variable "node_size" {
-  description = "The mysql node instance size."
+  description = "The postgresql node instance size."
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
 
 variable "replica_node_size" {
-  description = "The redis replica node instance size."
+  description = "The postgresql replica node instance size."
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
@@ -43,7 +43,7 @@ variable "region" {
 variable "replica_region" {
   description = "DigitalOcean replica region where the cluster will reside."
   type        = string
-  nullable    = false
+  default     = null
 }
 
 variable "common_tags" {
@@ -74,4 +74,10 @@ variable "replica_enable" {
   description = "Flag to control the replica creation."
   type        = bool
   default     = false
+}
+
+variable "env_name" {
+  description = "Name of the environment, where database will be deploy. Env will be added to cluster name."
+  type        = string
+  nullable    = false
 }

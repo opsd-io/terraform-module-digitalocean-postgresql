@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "digitalocean_database_cluster" "main" {
-  name       = var.cluster_name
+  name       = "${var.cluster_name}-${var.env_name}"
   engine     = "pg"
   version    = var.postgresql_version
   size       = var.node_size
@@ -53,7 +53,7 @@ resource "digitalocean_database_user" "main" {
 resource "digitalocean_database_replica" "main" {
   count      = var.replica_enable ? 1 : 0
   cluster_id = digitalocean_database_cluster.main.id
-  name       = var.replica_cluster_name
+  name       = var.replica_cluster_name != null ? var.replica_cluster_name : "${var.cluster_name}-${var.env_name}-replica"
   size       = var.replica_node_size
   region     = var.replica_region
 }
