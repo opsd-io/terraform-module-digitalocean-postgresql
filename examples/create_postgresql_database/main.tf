@@ -10,7 +10,6 @@ module "example" {
   database_users         = ["Admin", "Mark", "Robert"]
   firewall_rules         = ["192.168.0.1", "192.168.0.2", "192.168.0.8"]
   replica_enable         = true
-  env_name               = "stage"
   replica_node_size      = "db-s-1vcpu-1gb"
   replica_region         = "nyc1"
   replica_firewall_rules = ["172.168.0.1", "172.168.0.2", "172.168.0.8"]
