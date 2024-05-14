@@ -75,9 +75,3 @@ variable "replica_enable" {
   type        = bool
   default     = false
 }
-
-variable "env_name" {
-  description = "Name of the environment, where database will be deploy. Env will be added to cluster name."
-  type        = string
-  nullable    = false
-}
