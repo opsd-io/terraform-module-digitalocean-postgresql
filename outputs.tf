@@ -71,7 +71,10 @@ output "replica_id" {
   value       = digitalocean_database_replica.main[*].id
 }
 
-output "user_passwords" {
-  description = "A unique identifier for database users."
-  value       = [for id in var.database_users : digitalocean_database_user.main[id].user_password]
+output "user_password" {
+  value = {
+    for p, user in digitalocean_database_user.main : p => user.password
+  }
+  sensitive   = true
+  description = "Password for the database user."
 }

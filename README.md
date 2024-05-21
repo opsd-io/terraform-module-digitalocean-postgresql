@@ -101,7 +101,7 @@ No modules.
 | <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica ID. |
 | <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
 | <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users. |
-| <a name="output_user_passwords"></a> [user\_passwords](#output\_user\_passwords) | A unique identifier for database users. |
+| <a name="output_user_password"></a> [user\_password](#output\_user\_password) | Password for the database user. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage
