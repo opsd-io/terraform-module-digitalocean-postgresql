@@ -79,6 +79,7 @@ No modules.
 | [digitalocean_database_cluster.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_cluster) | resource |
 | [digitalocean_database_firewall.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_firewall) | resource |
 | [digitalocean_database_firewall.replica_fw](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_firewall) | resource |
+| [digitalocean_database_postgresql_config.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_postgresql_config) | resource |
 | [digitalocean_database_replica.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_replica) | resource |
 | [digitalocean_database_user.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_user) | resource |
 
@@ -99,6 +100,7 @@ No modules.
 | <a name="input_replica_firewall_rules"></a> [replica\_firewall\_rules](#input\_replica\_firewall\_rules) | List of trusted sources associated with the replica cluster. | <pre>list(object({<br>    type  = string<br>    value = string<br>  }))</pre> | `[]` | no |
 | <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The postgresql replica node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_replica_region"></a> [replica\_region](#input\_replica\_region) | DigitalOcean replica region where the cluster will reside. | `string` | `null` | no |
+| <a name="input_timezone"></a> [timezone](#input\_timezone) | PostgreSQL service timezone | `string` | `"UTC"` | no |
 | <a name="input_vpc_uuid"></a> [vpc\_uuid](#input\_vpc\_uuid) | The ID of the VPC where the load balancer will be located. | `string` | `null` | no |
 
 ## Outputs

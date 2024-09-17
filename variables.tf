@@ -87,3 +87,9 @@ variable "vpc_uuid" {
   type        = string
   default     = null
 }
+
+variable "timezone" {
+  description = "PostgreSQL service timezone"
+  type        = string
+  default     = "UTC"
+}
