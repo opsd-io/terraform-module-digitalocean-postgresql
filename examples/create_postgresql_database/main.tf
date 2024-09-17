@@ -1,5 +1,5 @@
 module "example" {
-  source = "github.com/opsd-io/terraform-module-digitalocean-postgresql"
+  source = "github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=9-feature-add-database_clusterurn-output"
 
   cluster_name           = "opsd-main"
   postgresql_version     = "16"

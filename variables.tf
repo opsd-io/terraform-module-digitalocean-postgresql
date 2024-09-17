@@ -75,3 +75,9 @@ variable "replica_enable" {
   type        = bool
   default     = false
 }
+
+variable "vpc_uuid" {
+  description = "The ID of the VPC where the load balancer will be located."
+  type        = string
+  default     = null
+}

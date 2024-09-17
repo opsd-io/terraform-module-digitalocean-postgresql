@@ -82,11 +82,13 @@ No modules.
 | <a name="input_replica_firewall_rules"></a> [replica\_firewall\_rules](#input\_replica\_firewall\_rules) | List of trusted sources associated with the replica cluster. | `set(string)` | `[]` | no |
 | <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The postgresql replica node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_replica_region"></a> [replica\_region](#input\_replica\_region) | DigitalOcean replica region where the cluster will reside. | `string` | `null` | no |
+| <a name="input_vpc_uuid"></a> [vpc\_uuid](#input\_vpc\_uuid) | The ID of the VPC where the load balancer will be located. | `string` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_database_cluster_urn"></a> [database\_cluster\_urn](#output\_database\_cluster\_urn) | The uniform resource name of the database cluster. |
 | <a name="output_firewall_id"></a> [firewall\_id](#output\_firewall\_id) | A unique identifier for the firewall. |
 | <a name="output_main_default_database"></a> [main\_default\_database](#output\_main\_default\_database) | Name of the cluster's default database. |
 | <a name="output_main_default_user"></a> [main\_default\_user](#output\_main\_default\_user) | Username for the cluster's default user. |
@@ -100,6 +102,7 @@ No modules.
 | <a name="output_replica_id"></a> [replica\_id](#output\_replica\_id) | Replica ID. |
 | <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
 | <a name="output_user_ids"></a> [user\_ids](#output\_user\_ids) | A unique identifier for database users. |
+| <a name="output_user_password"></a> [user\_password](#output\_user\_password) | Password for the database user. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage

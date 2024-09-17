@@ -56,6 +56,11 @@ output "user_ids" {
   value       = [for id in var.database_users : digitalocean_database_user.main[id].id]
 }
 
+output "database_cluster_urn" {
+  description = "The uniform resource name of the database cluster."
+  value       = digitalocean_database_cluster.main.urn
+}
+
 output "replica_uuid" {
   description = "Replica UUID."
   value       = digitalocean_database_replica.main[*].uuid
@@ -64,4 +69,12 @@ output "replica_uuid" {
 output "replica_id" {
   description = "Replica ID."
   value       = digitalocean_database_replica.main[*].id
+}
+
+output "user_password" {
+  value = {
+    for p, user in digitalocean_database_user.main : p => user.password
+  }
+  sensitive   = true
+  description = "Password for the database user."
 }
