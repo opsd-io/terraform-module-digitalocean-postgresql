@@ -54,14 +54,20 @@ variable "common_tags" {
 
 variable "firewall_rules" {
   description = "List of trusted sources associated with the cluster."
-  type        = set(string)
-  default     = []
+  type = list(object({
+    type  = string
+    value = string
+  }))
+  default = []
 }
 
 variable "replica_firewall_rules" {
   description = "List of trusted sources associated with the replica cluster."
-  type        = set(string)
-  default     = []
+  type = list(object({
+    type  = string
+    value = string
+  }))
+  default = []
 }
 
 variable "database_users" {

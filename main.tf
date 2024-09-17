@@ -26,8 +26,8 @@ resource "digitalocean_database_firewall" "main" {
   dynamic "rule" {
     for_each = var.firewall_rules
     content {
-      type  = "ip_addr"
-      value = rule.value
+      type  = rule.value.type
+      value = rule.value.value
     }
   }
 }
@@ -38,8 +38,8 @@ resource "digitalocean_database_firewall" "replica_fw" {
   dynamic "rule" {
     for_each = var.replica_firewall_rules
     content {
-      type  = "ip_addr"
-      value = rule.value
+      type  = rule.value.type
+      value = rule.value.value
     }
   }
   depends_on = [digitalocean_database_replica.main]
