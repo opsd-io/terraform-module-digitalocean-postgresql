@@ -1,7 +1,7 @@
 repos:
   # Pre-commit hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0 # See the release notes at https://github.com/pre-commit/pre-commit-hooks/releases
+    rev: v4.6.0 # See the release notes at https://github.com/pre-commit/pre-commit-hooks/releases
     hooks:
       - id: end-of-file-fixer
         name: end of file fixer
@@ -38,7 +38,7 @@ repos:
 
   # Terraform
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.88.0 # See the release notes at https://github.com/antonbabenko/pre-commit-terraform/releases
+    rev: v1.96.0 # See the release notes at https://github.com/antonbabenko/pre-commit-terraform/releases
     hooks:
       - id: terraform_fmt
         name: terraform fmt
