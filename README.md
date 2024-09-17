@@ -15,23 +15,40 @@ What does the module provide?
 ## Usage
 
 ```hcl
-module "terraform-module-digitalocean-postgresql" {
+module "postgresql" {
+  source  = "https://github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=main"
 
   cluster_name            = "example-postgresql-cluster"
-  engine                  = "pg"
-  postgresql_version      = "11"
+  postgresql_version      = "16"
   node_size               = "db-s-1vcpu-1gb"
   region                  = "nyc1"
   node_count              = 1
-  common_tags             = ["production"]
+  common_tags             = ["postgresql", "production"]
   database_users          = ["Admin", "Mark", "Robert"]
-  firewall_rules          = ["192.168.0.1", "192.168.0.2", "192.168.0.8"]
+  firewall_rules          = [
+    {
+      type  = "ip_addr"
+      value = "172.168.0.1"
+    },
+    {
+      type  = "tag"
+      value = "app"
+    }
+  ]
   replica_enable          = true
   replica_node_size       = "db-s-1vcpu-1gb"
   replica_cluster_name    = "example-postgresql-replica-cluster"
   replica_region          = "nyc1"
-  firewall_rules_replica  = ["172.168.0.1", "172.168.0.2", "172.168.0.8"]
-
+  firewall_rules          = [
+    {
+      type  = "ip_addr"
+      value = "172.168.0.1"
+    },
+    {
+      type  = "tag"
+      value = "app"
+    }
+  ]
 }
 ```
 

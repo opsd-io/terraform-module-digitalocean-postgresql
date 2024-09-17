@@ -1,5 +1,5 @@
-module "example" {
-  source = "../../"
+module "postgresql" {
+  source = "https://github.com/opsd-io/terraform-module-digitalocean-postgresql?ref=main"
 
   cluster_name       = "opsd-main"
   postgresql_version = "16"
