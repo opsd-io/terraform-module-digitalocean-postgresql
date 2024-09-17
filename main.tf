@@ -9,6 +9,11 @@ terraform {
   }
 }
 
+resource "digitalocean_database_postgresql_config" "main" {
+  cluster_id = digitalocean_database_cluster.main.id
+  timezone   = var.timezone
+}
+
 resource "digitalocean_database_cluster" "main" {
   name                 = var.cluster_name
   engine               = "pg"

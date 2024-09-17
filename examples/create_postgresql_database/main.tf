@@ -31,4 +31,7 @@ module "postgresql" {
       value = "app"
     }
   ]
+
+  #PSQL config
+  timezone = "UTC"
 }
