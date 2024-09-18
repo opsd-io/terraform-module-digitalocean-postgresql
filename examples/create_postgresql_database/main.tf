@@ -6,7 +6,7 @@ module "postgresql" {
   node_size          = "db-s-1vcpu-1gb"
   region             = "nyc1"
   node_count         = 1
-  common_tags        = ["production"]
+  tags               = ["production"]
   database_users     = ["Admin", "Mark", "Robert"]
   firewall_rules = [
     {
