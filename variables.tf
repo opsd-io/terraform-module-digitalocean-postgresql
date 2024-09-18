@@ -46,7 +46,7 @@ variable "replica_region" {
   default     = null
 }
 
-variable "common_tags" {
+variable "tags" {
   description = "A list of tag names to be applied to the database cluster."
   type        = set(string)
   default     = []

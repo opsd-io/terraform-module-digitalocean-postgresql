@@ -21,7 +21,7 @@ resource "digitalocean_database_cluster" "main" {
   size                 = var.node_size
   region               = var.region
   node_count           = var.node_count
-  tags                 = var.common_tags
+  tags                 = var.tags
   private_network_uuid = var.vpc_uuid
 }
 
